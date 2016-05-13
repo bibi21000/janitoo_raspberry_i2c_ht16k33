@@ -1,0 +1,13 @@
+janitoo_raspberry_i2c_ht16k33 package
+=====================================
+
+Show janitoo's extensions.
+
+Core extensions
+---------------
+
+Components
+^^^^^^^^^^
+
+ - rpii2c.m8x8 (janitoo_raspberry_i2c_ht16k33.ht16k33:make_m8x8)
+
