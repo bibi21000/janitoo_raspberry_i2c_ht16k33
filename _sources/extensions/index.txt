@@ -1,13 +1,7 @@
-janitoo_raspberry_i2c_ht16k33 package
-=====================================
+Janitoo's extensions
+====================
 
-Show janitoo's extensions.
+This package contains the following extensions for Janitoo.
 
-Core extensions
----------------
-
-Components
-^^^^^^^^^^
-
- - rpii2c.m8x8 (janitoo_raspberry_i2c_ht16k33.ht16k33:make_m8x8)
+.. jnt-extensions::
 
