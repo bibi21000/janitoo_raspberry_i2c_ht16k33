@@ -44,7 +44,6 @@ try:
 except Exception:
     logger.exception("Can't import Adafruit_LED_Backpack")
 
-
 ##############################################################
 #Check that we are in sync with the official command classes
 #Must be implemented for non-regression
@@ -59,6 +58,8 @@ assert(COMMAND_DESC[COMMAND_WEB_RESOURCE] == 'COMMAND_WEB_RESOURCE')
 assert(COMMAND_DESC[COMMAND_DOC_RESOURCE] == 'COMMAND_DOC_RESOURCE')
 ##############################################################
 
+from janitoo_raspberry_i2c import OID
+
 def make_m8x8(**kwargs):
     return M8X8Component(**kwargs)
 
@@ -68,7 +69,7 @@ class M8X8Component(JNTComponent):
     def __init__(self, bus=None, addr=None, **kwargs):
         """
         """
-        oid = kwargs.pop('oid', 'rpii2c.m8x8')
+        oid = kwargs.pop('oid', '%s.m8x8'%OID)
         name = kwargs.pop('name', "Input")
         product_name = kwargs.pop('product_name', "Matrix 8x8")
         product_type = kwargs.pop('product_type', "Matrix 8x8")
