@@ -98,7 +98,7 @@ class M8X8Component(JNTComponent):
         JNTComponent.start(self, mqttc)
         self._bus.i2c_acquire()
         try:
-            self.display = Matrix8x8.Matrix8x8(address=self.values["addr"].data, i2c=self._bus._ada_i2c, busnum=self._bus.get_busnum())
+            self.display = Matrix8x8.Matrix8x8(address=self.values["addr"].data, i2c=self._bus.get_adafruit_i2c(), busnum=self._bus.get_busnum())
             self.display.begin()
         except Exception:
             logger.exception("[%s] - Can't start component", self.__class__.__name__)
